@@ -1,27 +1,29 @@
-# -*- coding:utf-8 -*-
+# 从尾至头打印链表
+# 递归法
 class ListNode:
-    def __init__(self, x):
-        self.val = x
+    def __init__(self, v):
+        self.val = v
         self.next = None
-    # def creat(self, head, x):
-    #     while head.next != None:
-    #         head = head.next
-    #     head.next = ListNode(x)
+    def create(self, p, v):
+        while p.next != None:
+            p = p.next
+        p.next = ListNode(v)
 
 class Solution:
-    # 返回从尾部到头部的列表值序列，例如[1,2,3]
     def printListFromTailToHead(self, listNode):
-        # write code here
-        point = listNode
         res = []
-        while point != None:
-            res.append(point.val)
-            point = point.next
-        res.reverse()
+        def printListnode(listNode):
+            if listNode:
+                printListnode(listNode.next)  # 先递归到最后一层
+                res.append(listNode.val)  # 添加值，退出函数，返回到上一层函数中的这行，继续添加值
+
+        printListnode(listNode)
         return res
 
-s = Solution()
-listNode = ListNode(1)
-listNode.creat(listNode, 2)
-listNode.creat(listNode, 3)
-print(s.printListFromTailToHead(listNode))
+if __name__ == '__main__':
+    s = Solution()
+    head = ListNode(1)
+    head.create(head, 2)
+    head.create(head, 3)
+    print(s.printListFromTailToHead(head))
+
