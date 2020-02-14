@@ -38,6 +38,8 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    pre = [1,2,3,4,5,6,7]
-    tin = [3,2,4,1,6,5,7]
+    # pre = [1,2,3,4,5,6,7]
+    # tin = [3,2,4,1,6,5,7]
+    pre = [1,2,4,7,3,5,6,8]
+    tin = [4,7,2,1,5,3,8,6]
     print(s.reConstructBinaryTree(pre, tin).val)
