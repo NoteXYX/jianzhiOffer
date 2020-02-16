@@ -1,5 +1,5 @@
-from queue import Queue
 # 利用两个栈实现队列
+from queue import Queue
 class Solution1:
     def __init__(self):
         self.stack1 = []

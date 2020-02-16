@@ -1,4 +1,4 @@
-# 剑指offer NO.2 替换空格
+# 替换空格
 class Solution:
     def replaceSpace(self, s):
         num_space = 0
