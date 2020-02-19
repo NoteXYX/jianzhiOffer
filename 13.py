@@ -12,9 +12,9 @@ class Solution:
         if self.check(threshold, rows, cols, row, col, visited):
             visited[row * cols + col] = True
             count = 1 + self.hasCore(threshold, rows, cols, row-1, col, visited) \
-            + self.hasCore(threshold, rows, cols, row+1, col, visited) \
-            + self.hasCore(threshold, rows, cols, row, col-1, visited) \
-            + self.hasCore(threshold, rows, cols, row, col+1, visited)
+                      + self.hasCore(threshold, rows, cols, row+1, col, visited) \
+                      + self.hasCore(threshold, rows, cols, row, col-1, visited) \
+                      + self.hasCore(threshold, rows, cols, row, col+1, visited)
         return count
     def check(self, threshold, rows, cols, row, col, visited):
         if 0 <= row < rows and 0 <= col < cols \

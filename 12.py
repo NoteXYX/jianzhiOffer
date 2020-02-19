@@ -19,9 +19,9 @@ class Solution:
             pathLength += 1
             visited[row * cols + col] = True
             hasC = self.hasCore(matrix, rows, cols, row-1, col, visited, path, pathLength) \
-            or self.hasCore(matrix, rows, cols, row+1, col, visited, path, pathLength) \
-            or self.hasCore(matrix, rows, cols, row, col-1, visited, path, pathLength) \
-            or self.hasCore(matrix, rows, cols, row, col+1, visited, path, pathLength)
+                    or self.hasCore(matrix, rows, cols, row+1, col, visited, path, pathLength) \
+                    or self.hasCore(matrix, rows, cols, row, col-1, visited, path, pathLength) \
+                    or self.hasCore(matrix, rows, cols, row, col+1, visited, path, pathLength)
             if not hasC:
                 pathLength -= 1
                 visited[row * cols + col] = False
