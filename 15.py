@@ -10,7 +10,7 @@ class Solution:
         return count
     def NumberOf1_2(self, n):
         count = 0
-        while n >= -2**31 - 1 and n != 0:
+        while n >= -2**31 and n != 0:
             count += 1
             n = n & (n - 1)
         return count
