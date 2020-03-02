@@ -7,10 +7,10 @@ class Solution:
         i = 0
         j = 0
         while i < len(array) and j < len(array):
-            while i < len(array) and array[i] & 1 != 0:
+            while i < len(array) and array[i] & 1 != 0: # 若为奇数
                 i += 1
             j = i + 1
-            while j < len(array) and array[j] & 1 == 0:
+            while j < len(array) and array[j] & 1 == 0: # 若为偶数
                 j += 1
             if j < len(array):
                 tmp_index = j
